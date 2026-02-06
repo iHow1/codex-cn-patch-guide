@@ -21,6 +21,8 @@
 - 主流程文档：[`CODEX_CN_PATCH_GUIDE.md`](./CODEX_CN_PATCH_GUIDE.md)
 - 中文说明页：[`README.zh-CN.md`](./README.zh-CN.md)
 - 发布文案与模板：[`publish-kit`](./publish-kit)
+- 一键补丁脚本：[`scripts/apply_codex_cn_patch.sh`](./scripts/apply_codex_cn_patch.sh)
+- 补丁映射表：[`patches/codex_5_3_cn_patch.json`](./patches/codex_5_3_cn_patch.json)
 
 ## 适用范围
 
@@ -39,3 +41,24 @@
 先看这个文件：
 
 - [`publish-kit/GITHUB_BEGINNER_STEPS.md`](./publish-kit/GITHUB_BEGINNER_STEPS.md)
+
+## 快速使用（脚本版）
+
+先准备一个可写的 Codex 副本（推荐）：
+
+```bash
+mkdir -p ~/Applications
+rsync -a /Applications/Codex.app/ ~/Applications/Codex.app/
+```
+
+直接执行补丁：
+
+```bash
+./scripts/apply_codex_cn_patch.sh ~/Applications/Codex.app
+```
+
+只做匹配检测（不写入）：
+
+```bash
+python3 ./scripts/apply_codex_cn_patch.py --app ~/Applications/Codex.app --dry-run
+```

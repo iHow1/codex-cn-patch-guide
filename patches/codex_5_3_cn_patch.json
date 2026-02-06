@@ -1,0 +1,140 @@
+{
+  "name": "codex-5.3-cn-patch",
+  "description": "Codex 桌面端中文补丁（非官方，等长替换 + 完整性修复）",
+  "strict_length": false,
+  "min_total_replacements": 25,
+  "intl_replacements": [
+    {"id": "codex.taskRow.title", "from": "New thread", "to": "新对话"},
+    {"id": "home.hero.letsBuild", "from": "Let’s build", "to": "开始构建"},
+    {"id": "home.conversationStarters.exploreMore", "from": "Explore more", "to": "去探索"},
+
+    {"id": "settings.nav.back", "from": "Back to app", "to": "返回App"},
+    {"id": "settings.nav.general-settings", "from": "General", "to": "常规"},
+    {"id": "settings.nav.agent", "from": "Configuration", "to": "配置"},
+    {"id": "settings.nav.personalization", "from": "Personalization", "to": "个性化"},
+    {"id": "settings.nav.mcp-settings", "from": "MCP servers", "to": "MCP服务"},
+    {"id": "settings.nav.git-settings", "from": "Git", "to": "Git"},
+    {"id": "settings.nav.local-environments", "from": "Environments", "to": "环境"},
+    {"id": "settings.nav.worktrees", "from": "Worktrees", "to": "工作树"},
+    {"id": "settings.nav.data-controls", "from": "Archived threads", "to": "归档会话"},
+
+    {"id": "settings.section.general-settings", "from": "General", "to": "常规"},
+    {"id": "settings.section.agent", "from": "Configuration", "to": "配置"},
+    {"id": "settings.section.personalization", "from": "Personalization", "to": "个性化"},
+    {"id": "settings.section.mcp-settings", "from": "MCP servers", "to": "MCP服务"},
+    {"id": "settings.section.git-settings", "from": "Git", "to": "Git"},
+    {"id": "settings.section.local-environments", "from": "Environments", "to": "环境"},
+    {"id": "settings.section.worktrees", "from": "Worktrees", "to": "工作树"},
+    {"id": "settings.section.data-controls", "from": "Archived threads", "to": "归档会话"},
+
+    {"id": "settings.section.mcp-settings.subtitle", "from": "Connect external tools and data sources. ", "to": "连接外部工具和数据源。"},
+    {"id": "settings.section.mcp-settings.docs", "from": "Docs", "to": "文"},
+
+    {"id": "settings.general.appearance", "from": "Appearance", "to": "外观"},
+    {"id": "settings.ide.defaultOpenTarget.label", "from": "Default open destination", "to": "默认打开位置"},
+    {"id": "settings.ide.defaultOpenTarget.description", "from": "Where files and folders open by default", "to": "文件和文件夹默认打开位置"},
+    {"id": "settings.threadDetail.label", "from": "Thread detail", "to": "会话详情"},
+    {"id": "settings.threadDetail.description", "from": "Choose how much command output to show in threads", "to": "选择会话中命令输出的显示方式"},
+
+    {"id": "settings.conversationDetail.steps", "from": "Steps", "to": "步"},
+    {"id": "settings.conversationDetail.stepsWithCommands", "from": "Steps with code commands", "to": "命令步骤"},
+    {"id": "settings.conversationDetail.stepsWithOutput", "from": "Steps with code output", "to": "输出步骤"},
+
+    {"id": "settings.general.appearance.theme", "from": "Theme", "to": "主"},
+    {"id": "settings.general.appearance.theme.description", "from": "Use light, dark, or match your system", "to": "使用浅色、深色或跟随系统"},
+    {"id": "settings.general.appearance.theme.light", "from": "Light", "to": "浅"},
+    {"id": "settings.general.appearance.theme.dark", "from": "Dark", "to": "深"},
+    {"id": "settings.general.appearance.theme.system", "from": "System", "to": "系统"},
+
+    {"id": "settings.general.appearance.opaqueWindows.label", "from": "Use opaque window background", "to": "使用不透明窗口背景"},
+    {"id": "settings.general.appearance.opaqueWindows.description", "from": "Make windows use a solid background rather than system translucency", "to": "使用纯色背景而不是系统半透明"},
+
+    {"id": "settings.general.appearance.usePointerCursors.label", "from": "Use pointer cursors", "to": "使用指针光标"},
+    {"id": "settings.general.appearance.usePointerCursors.description", "from": "Change the cursor to a pointer when hovering over interactive elements", "to": "悬停可交互元素时使用手型光标"},
+
+    {"id": "settings.general.followUpQueueMode.label", "from": "Follow-up behavior", "to": "后续行为"},
+    {"id": "settings.general.followUpQueueMode.description", "from": "Queue follow-ups while Codex runs or steer the current run", "to": "运行中排队后续请求或直接转向当前运行"},
+    {"id": "settings.general.followUpQueueMode.queue", "from": "Queue", "to": "排"},
+    {"id": "settings.general.followUpQueueMode.interrupt", "from": "Steer", "to": "转"},
+
+    {"id": "settings.general.appearance.sansFontFamily", "from": "Sans font family", "to": "无衬线字体"},
+    {"id": "settings.general.appearance.sansFontFamily.description", "from": "Adjust the font used for the Codex UI", "to": "调整 Codex 界面字体"},
+    {"id": "settings.general.appearance.codeFont", "from": "Code font", "to": "代码"},
+    {"id": "settings.general.appearance.codeFont.description", "from": "Adjust font and size used for code across chats and diffs", "to": "调整聊天和 diff 的代码字体与大小"},
+
+    {"id": "settings.general.enterBehavior.label", "from": "Require {modifierSymbol} + enter to send long prompts", "to": "发送长提示需按 {modifierSymbol} + 回车"},
+    {"id": "settings.general.enterBehavior.description", "from": "When enabled, multiline prompts require {modifierSymbol} + enter to send.", "to": "开启后，多行提示需按 {modifierSymbol} + 回车发送。"},
+
+    {"id": "settings.general.power.preventSleepWhileRunning.label", "from": "Prevent sleep while running", "to": "运行时防止休眠"},
+    {"id": "settings.general.power.preventSleepWhileRunning.description", "from": "Keep your computer awake while Codex is running a thread.", "to": "Codex 运行任务时保持电脑唤醒。"},
+
+    {"id": "settings.agent.configuration.subtitle", "from": "These settings apply to anywhere Codex is used", "to": "这些设置会在所有 Codex 环境生效"},
+    {"id": "settings.agent.configuration.configToml.description", "from": "Edit your config to customize agent behavior", "to": "编辑配置以自定义代理行为"},
+    {"id": "settings.agent.configuration.configToml.restartNote", "from": "Restart Codex after editing to apply changes", "to": "编辑后重启 Codex 以应用更改"},
+    {"id": "settings.agent.configuration.configToml.docs", "from": "Docs", "to": "文"},
+    {"id": "settings.openSourceLicenses.rowLabel", "from": "Open source licenses", "to": "开源许可证"},
+    {"id": "settings.openSourceLicenses.rowDescription", "from": "Third-party notices for bundled dependencies", "to": "捆绑依赖的第三方声明"},
+    {"id": "settings.openSourceLicenses.view", "from": "View", "to": "看"},
+
+    {"id": "settings.personalization.personality.label", "from": "Personality", "to": "性格"},
+    {"id": "settings.personalization.personality.description", "from": "Choose a default tone for Codex responses", "to": "选择 Codex 回复的默认语气"},
+    {"id": "settings.personalization.agents.title", "from": "Custom instructions", "to": "自定义指令"},
+    {"id": "settings.personalization.agents.description", "from": "Edit instructions that tailor Codex to you. {learnMore}", "to": "编辑用于定制 Codex 的指令。{learnMore}"},
+    {"id": "settings.personalization.agents.learnMore", "from": "Learn more", "to": "更多"},
+    {"id": "settings.personalization.agents.placeholder", "from": "Add your custom instructions…", "to": "添加你的自定义指令..."},
+    {"id": "settings.personalization.agents.save", "from": "Save", "to": "存"},
+
+    {"id": "settings.mcp.myServers", "from": "Custom servers", "to": "自定义服"},
+    {"id": "settings.mcp.empty", "from": "No custom MCP servers connected", "to": "未连接MCP服务"},
+    {"id": "settings.mcp.recommendedServers", "from": "Recommended servers", "to": "推荐服务"},
+    {"id": "settings.mcp.addServer", "from": "Add server", "to": "加服务"},
+    {"id": "settings.mcp.partnerServer.installAndAuthenticate", "from": "Install and authenticate", "to": "安装并授权"},
+    {"id": "settings.mcp.partnerServer.vendor", "from": "by {vendor}", "to": "源{vendor}"},
+    {"id": "settings.mcp.partnerServer.install", "from": "Install", "to": "安装"},
+    {"id": "settings.mcp.server.login", "from": "Authenticate", "to": "授权"},
+    {"id": "settings.mcp.server.settings", "from": "Settings", "to": "设置"},
+    {"id": "settings.mcp.server.enable", "from": "Enable", "to": "启用"},
+    {"id": "settings.mcp.partnerServer.description.linear", "from": "Integrate with Linear's issue tracking and project management", "to": "连接 Linear 进行问题跟踪和项目管理"},
+    {"id": "settings.mcp.partnerServer.description.notion", "from": "Read docs, update pages, manage tasks", "to": "读文档、改页面、管任务"},
+    {"id": "settings.mcp.partnerServer.description.figma", "from": "Generate better code by bringing in full Figma context", "to": "引入完整 Figma 上下文，生成更优代码"},
+    {"id": "settings.mcp.partnerServer.description.playwright", "from": "Integrate browser automation to implement design and test UI.", "to": "集成浏览器自动化以实现设计并测试 UI。"},
+
+    {"id": "settings.git.branchPrefix.label", "from": "Branch prefix", "to": "分支前缀"},
+    {"id": "settings.git.branchPrefix.description", "from": "Prefix used when creating new branches in Codex", "to": "在 Codex 创建新分支时使用的前缀"},
+    {"id": "settings.git.forcePush.label", "from": "Always force push", "to": "始终强推"},
+    {"id": "settings.git.forcePush.description", "from": "Use --force-with-lease when pushing from Codex", "to": "从 Codex 推送时使用 --force-with-lease"},
+    {"id": "settings.git.commitInstructions.label", "from": "Commit instructions", "to": "提交指令"},
+    {"id": "settings.git.commitInstructions.description", "from": "Added to commit message generation prompts", "to": "用于生成提交信息的附加提示"},
+    {"id": "settings.git.commitInstructions.save", "from": "Save", "to": "存"},
+    {"id": "settings.git.commitInstructions.placeholder", "from": "Add commit message guidance…", "to": "添加提交信息指引..."},
+    {"id": "settings.git.prInstructions.label", "from": "Pull request instructions", "to": "PR 指令"},
+    {"id": "settings.git.prInstructions.description", "from": "Appended to pull request bodies created by Codex", "to": "追加到 Codex 生成的 PR 描述中"},
+    {"id": "settings.git.prInstructions.save", "from": "Save", "to": "存"},
+    {"id": "settings.git.prInstructions.placeholder", "from": "Add pull request guidance…", "to": "添加拉取请求指引..."},
+
+    {"id": "settings.localEnvironments.workspaceSelect.title", "from": "Select a project", "to": "选择项目"},
+    {"id": "settings.localEnvironments.workspaceSelect.description", "from": "Local environments tell Codex how to set up worktrees for a project. {learnMore}", "to": "本地环境用于告诉 Codex 如何为项目设置工作树。{learnMore}"},
+    {"id": "settings.localEnvironments.workspaceSelect.learnMore", "from": "Learn more", "to": "更多"},
+    {"id": "settings.localEnvironments.workspace.add", "from": "Add project", "to": "加项目"},
+
+    {"id": "settings.worktrees.empty.title", "from": "No worktrees yet", "to": "暂无工作树"},
+    {"id": "settings.worktrees.empty.body", "from": "Worktrees created by Codex will appear here.", "to": "Codex 创建的工作树会显示在此。"},
+
+    {"id": "settings.dataControls.archivedChats.empty", "from": "No archived chats.", "to": "暂无归档会话"}
+  ],
+  "literal_replacements": [
+    {"from": "Build a classic Snake game in this repo.", "to": "在仓库做经典贪吃蛇游戏。"},
+    {"from": "Create a one-page $pdf that summarizes this app.", "to": "创建一页$pdf来总结这个应用。"},
+    {"from": "Summarize last week's PRs by teammate and theme.", "to": "按成员和主题汇总上周PR。"},
+
+    {"from": "defaultMessage:\"Open\"", "to": "defaultMessage:\"开 \""},
+    {"from": "defaultMessage:\"Commit\"", "to": "defaultMessage:\"提交\""},
+    {"from": "defaultMessage:\"Settings\"", "to": "defaultMessage:\"设置\""},
+    {"from": "defaultMessage:\"Threads\"", "to": "defaultMessage:\"会话\""},
+
+    {"from": "buttons:[\"Quit\",\"Cancel\"]", "to": "buttons:[\"退 \",\"取消\"]"},
+    {"from": "title:\"Quit Codex?\"", "to": "title:\"退 Codex?\""},
+    {"from": "message:\"Quit Codex?\"", "to": "message:\"退 Codex?\""},
+    {"from": "detail:\"Any local threads running on this machine will be interrupted and scheduled automations won't run\"", "to": "detail:\"本机任务将中断，计划自动化不会运行。\""}
+  ]
+}

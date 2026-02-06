@@ -26,6 +26,8 @@
 
 - 核心流程：[`CODEX_CN_PATCH_GUIDE.md`](./CODEX_CN_PATCH_GUIDE.md)
 - 发布文案：[`publish-kit`](./publish-kit)
+- 一键补丁脚本：[`scripts/apply_codex_cn_patch.sh`](./scripts/apply_codex_cn_patch.sh)
+- 补丁映射表：[`patches/codex_5_3_cn_patch.json`](./patches/codex_5_3_cn_patch.json)
 
 ## 快速开始（建议）
 
@@ -47,3 +49,24 @@
 - [`publish-kit/GITHUB_BEGINNER_STEPS.md`](./publish-kit/GITHUB_BEGINNER_STEPS.md)
 
 里面有从“创建仓库”到“推送代码”的最短路径。
+
+## 脚本快速使用
+
+建议先复制系统版到用户目录副本：
+
+```bash
+mkdir -p ~/Applications
+rsync -a /Applications/Codex.app/ ~/Applications/Codex.app/
+```
+
+执行补丁：
+
+```bash
+./scripts/apply_codex_cn_patch.sh ~/Applications/Codex.app
+```
+
+仅检测匹配（不写入）：
+
+```bash
+python3 ./scripts/apply_codex_cn_patch.py --app ~/Applications/Codex.app --dry-run
+```

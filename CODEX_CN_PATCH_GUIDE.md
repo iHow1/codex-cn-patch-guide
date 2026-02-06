@@ -26,6 +26,28 @@
 
 ---
 
+## 2.1 一键脚本（推荐）
+
+仓库已提供可直接执行的补丁脚本：
+
+- `scripts/apply_codex_cn_patch.sh`
+- `scripts/apply_codex_cn_patch.py`
+- `patches/codex_5_3_cn_patch.json`
+
+执行方式：
+
+```bash
+./scripts/apply_codex_cn_patch.sh ~/Applications/Codex.app
+```
+
+只检测不写入：
+
+```bash
+python3 ./scripts/apply_codex_cn_patch.py --app ~/Applications/Codex.app --dry-run
+```
+
+---
+
 ## 3. 工作目录约定
 
 - 补丁目标（推荐）：`/Users/<你用户名>/Applications/Codex.app`
@@ -235,4 +257,3 @@ ps -ax -o pid=,command= | rg 'Codex.app/Contents/MacOS/Codex'
 - 每次官方更新可能覆盖补丁，需要重做。
 - 非官方方式，存在兼容性风险。
 - 建议保留一份未修改的 `Codex.app` 备份。
-
