@@ -1,42 +1,41 @@
-# Codex Desktop Chinese Patch Guide (Unofficial)
+# Codex 桌面端中文补丁指南（非官方）
 
-Unofficial Chinese localization patch workflow for Codex desktop app.
+这是一个面向中文用户的 Codex 桌面端汉化补丁仓库。  
+目标是提供一条**可复现**、**可排错**、**可回滚**的工程化路径。
 
-This repo documents a reproducible path to patch UI strings while keeping Electron integrity checks valid.
+## 这个仓库是做什么的
 
-## Language
+- 把 Codex 桌面端核心界面文案替换成中文
+- 保证替换后应用仍可启动（通过完整性修复）
+- 提供完整操作文档和常见问题排查
 
-- English: this file
-- 简体中文: [`README.zh-CN.md`](./README.zh-CN.md)
+## 核心能力
 
-## Highlights
+- 等长字符串替换（避免 asar 偏移问题）
+- 更新 `app.asar` 内部完整性字段
+- 更新 `Info.plist` 的 `ElectronAsarIntegrity`
+- 重签名与缓存清理流程
 
-- Works on Codex desktop (tested on `5.3.x` family)
-- Uses byte-length-safe string replacement
-- Fixes `app.asar` file integrity fields and `ElectronAsarIntegrity`
-- Re-signs app so it can launch
-- Includes troubleshooting for cache / multiple app copies / keychain prompts
+## 文档入口
 
-## File
+- 主流程文档：[`CODEX_CN_PATCH_GUIDE.md`](./CODEX_CN_PATCH_GUIDE.md)
+- 中文说明页：[`README.zh-CN.md`](./README.zh-CN.md)
+- 发布文案与模板：[`publish-kit`](./publish-kit)
 
-- [`CODEX_CN_PATCH_GUIDE.md`](./CODEX_CN_PATCH_GUIDE.md)
-- [`README.zh-CN.md`](./README.zh-CN.md)
+## 适用范围
 
-## Important Disclaimer
+- 目标版本：`Codex 5.3.x`（实测）
+- 系统环境：macOS
 
-- This is an **unofficial** patch for research/learning.
-- Do **not** redistribute official app binaries.
-- App updates may overwrite the patch.
-- All trademarks and product names belong to their owners.
+## 重要声明
 
-## Suggested Repo Structure
+- 本项目为**非官方补丁**，仅用于技术研究和学习交流。
+- 请勿分发官方应用二进制文件。
+- 官方更新可能覆盖补丁，需要重新适配。
+- 相关商标与产品名称归其所有者所有。
 
-- `CODEX_CN_PATCH_GUIDE.md`
-- `README.zh-CN.md`
-- `screenshots/`
-- `scripts/` (optional patch scripts)
-- `publish-kit/` (social + release copy)
+## 给第一次用 GitHub 的用户
 
-## License Suggestion
+先看这个文件：
 
-Use MIT for docs/scripts only (not official binaries).
+- [`publish-kit/GITHUB_BEGINNER_STEPS.md`](./publish-kit/GITHUB_BEGINNER_STEPS.md)

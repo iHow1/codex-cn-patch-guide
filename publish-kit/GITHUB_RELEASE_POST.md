@@ -1,24 +1,29 @@
-# GitHub 首发帖（可直接发到 README/Discussion）
+# GitHub 首发帖（中文，可直接发到 README/Discussion）
 
-Title:
-`Unofficial Chinese Patch Workflow for Codex Desktop (5.3.x)`
+标题：  
+`[非官方] Codex 桌面端中文补丁流程（5.3.x）`
 
-Body:
+正文：  
+本仓库记录了 Codex 桌面端中文补丁的一条可复现路径。  
+重点不是“翻译文案”，而是补丁后如何通过 Electron 完整性校验并正常启动。
 
-This repository documents a reproducible workflow to localize Codex desktop UI into Chinese while keeping Electron integrity checks valid.
+主要内容包括：
 
-What is included:
+- 等长字符串替换策略（避免 asar 结构偏移）
+- `app.asar` 内部完整性字段更新
+- `Info.plist` 中 `ElectronAsarIntegrity` 更新
+- 重签名与缓存清理流程
+- 多安装路径、钥匙串弹窗、缓存不生效等排错清单
 
-- Byte-length-safe UI string replacement strategy
-- `app.asar` internal integrity update
-- `Info.plist` `ElectronAsarIntegrity` update
-- Re-signing and cache-clearing workflow
-- Troubleshooting for multi-app copies, keychain prompts, and stale cache
+适用说明：
 
-Important:
+- 目标版本：`Codex 5.3.x`（实测）
+- 环境：macOS
 
-- Unofficial patch, for research/learning only
-- No redistribution of official binaries
-- App updates may overwrite patch
+声明：
 
-If this helps, feel free to open issues/PRs with version-specific offsets and verified mappings.
+- 本项目为非官方补丁，仅用于技术研究/学习交流
+- 不分发官方二进制文件
+- 官方更新可能覆盖补丁，需要重新适配
+
+欢迎提交 Issue/PR，一起补充不同版本的偏移和映射。
