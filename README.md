@@ -4,6 +4,11 @@ Unofficial Chinese localization patch workflow for Codex desktop app.
 
 This repo documents a reproducible path to patch UI strings while keeping Electron integrity checks valid.
 
+## Language
+
+- English: this file
+- 简体中文: [`README.zh-CN.md`](./README.zh-CN.md)
+
 ## Highlights
 
 - Works on Codex desktop (tested on `5.3.x` family)
@@ -15,6 +20,7 @@ This repo documents a reproducible path to patch UI strings while keeping Electr
 ## File
 
 - [`CODEX_CN_PATCH_GUIDE.md`](./CODEX_CN_PATCH_GUIDE.md)
+- [`README.zh-CN.md`](./README.zh-CN.md)
 
 ## Important Disclaimer
 
@@ -26,6 +32,7 @@ This repo documents a reproducible path to patch UI strings while keeping Electr
 ## Suggested Repo Structure
 
 - `CODEX_CN_PATCH_GUIDE.md`
+- `README.zh-CN.md`
 - `screenshots/`
 - `scripts/` (optional patch scripts)
 - `publish-kit/` (social + release copy)
