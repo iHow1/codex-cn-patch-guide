@@ -141,14 +141,31 @@ def walk_files(tree: dict, prefix: str = ""):
 
 
 def load_asar_header(asar_path: Path) -> Tuple[dict, int, int]:
+    """
+    Parse Electron ASAR header.
+
+    Header layout (little-endian u32):
+      - [0:4]   pickle payload size marker (typically 4)
+      - [4:8]   header blob size used for payload offset
+      - [8:12]  header object size (legacy/internal)
+      - [12:16] JSON header string length
+
+    File payload offsets in the header are relative to:
+      data_start = 8 + header_blob_size
+
+    NOTE:
+      Older patch scripts used `16 + header_json_len`. That is wrong for newer
+      Codex builds and causes a 1-2 byte skew, which breaks ASAR integrity.
+    """
     with asar_path.open("rb") as f:
         head = f.read(16)
         if len(head) != 16:
             raise RuntimeError("invalid asar header")
-        header_len = struct.unpack("<I", head[12:16])[0]
+        _pickle_size, header_blob_size, _header_obj_size, header_len = struct.unpack("<IIII", head)
         header_bytes = f.read(header_len)
+
     header_obj = json.loads(header_bytes.decode("utf-8"))
-    base_offset = 16 + header_len
+    base_offset = 8 + header_blob_size
     return header_obj, header_len, base_offset
 
 

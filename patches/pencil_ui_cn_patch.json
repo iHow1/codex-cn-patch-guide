@@ -1,0 +1,22 @@
+{
+  "name": "pencil-ui-cn-patch",
+  "description": "Pencil 属性面板局部汉化（非官方）",
+  "strict_length": false,
+  "min_total_replacements": 13,
+  "intl_replacements": [],
+  "literal_replacements": [
+    {"from": "title:\"Create component\"", "to": "title:\"创建组件\""},
+    {"from": "\" Create Component\"", "to": "\" 创建组件\""},
+    {"from": "children:\"Context\"", "to": "children:\"上下\""},
+    {"from": "children:\"Alignment\"", "to": "children:\"对齐\""},
+    {"from": "children:\"Gap\"", "to": "children:\"间\""},
+    {"from": "children:\"Padding\"", "to": "children:\"内边\""},
+    {"from": "children:\"Dimensions\"", "to": "children:\"尺寸\""},
+    {"from": "children:\"Fill Width\"", "to": "children:\"宽度\""},
+    {"from": "children:\"Fill Height\"", "to": "children:\"高度\""},
+    {"from": "children:\"Hug Width\"", "to": "children:\"抱宽\""},
+    {"from": "children:\"Hug Height\"", "to": "children:\"抱高\""},
+    {"from": "\"Flex Layout\"", "to": "\"布局\""},
+    {"from": "title:\"Position\"", "to": "title:\"位置\""}
+  ]
+}

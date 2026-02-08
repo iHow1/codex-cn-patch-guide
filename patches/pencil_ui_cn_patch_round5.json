@@ -1,0 +1,16 @@
+{
+  "name": "pencil-ui-cn-patch-round5",
+  "description": "Pencil 外观与填充面板汉化补齐（非官方）",
+  "strict_length": false,
+  "min_total_replacements": 6,
+  "intl_replacements": [],
+  "literal_replacements": [
+    {"from": "title:\"Appearance\"", "to": "title:\"外观\""},
+    {"from": "title:\"Fill\"", "to": "title:\"填\""},
+    {"from": "children:\"Fill\"", "to": "children:\"充\""},
+    {"from": "children:\"Linear\"", "to": "children:\"线性\""},
+    {"from": "children:\"Radial\"", "to": "children:\"径向\""},
+    {"from": "children:\"Angular\"", "to": "children:\"角向\""},
+    {"from": "children:\"Mesh\"", "to": "children:\"网\""}
+  ]
+}
