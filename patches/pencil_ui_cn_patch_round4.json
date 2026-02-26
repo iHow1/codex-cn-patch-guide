@@ -1,0 +1,19 @@
+{
+  "name": "pencil-ui-cn-patch-round4",
+  "description": "Pencil 形状菜单汉化补齐（非官方）",
+  "strict_length": false,
+  "min_total_replacements": 10,
+  "intl_replacements": [],
+  "literal_replacements": [
+    {"from": "name:\"Rectangle\"", "to": "name:\"矩形\""},
+    {"from": "name:\"Ellipse\"", "to": "name:\"椭圆\""},
+    {"from": "name:\"Icon Font\"", "to": "name:\"图标\""},
+    {"from": "name:\"Import Image or SVG…\"", "to": "name:\"导入图片/SVG\""},
+    {"from": "label:\"Rectangle\"", "to": "label:\"矩形\""},
+    {"from": "label:\"Ellipse\"", "to": "label:\"椭圆\""},
+    {"from": "label:\"Import Image or SVG…\"", "to": "label:\"导入图片/SVG\""},
+    {"from": "label:\"Icon\"", "to": "label:\"图\""},
+    {"from": "\"Import Figma\"", "to": "\"导入Figma\""},
+    {"from": "\"Pen\"]},\"pen\"", "to": "\"笔\"]},\"pen\""}
+  ]
+}

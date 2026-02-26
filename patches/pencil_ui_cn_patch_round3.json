@@ -1,0 +1,15 @@
+{
+  "name": "pencil-ui-cn-patch-round3",
+  "description": "Pencil 导出面板汉化补齐（非官方）",
+  "strict_length": false,
+  "min_total_replacements": 6,
+  "intl_replacements": [],
+  "literal_replacements": [
+    {"from": "title:\"Effects\"", "to": "title:\"效果\""},
+    {"from": "title:\"Export\"", "to": "title:\"导出\""},
+    {"from": "\"Export layer\"", "to": "\"导出图层\""},
+    {"from": "`Export layers (${e})`", "to": "`导出图层(${e})`"},
+    {"from": "Export failed", "to": "导出失败"},
+    {"from": "Export to image failed", "to": "导出图片失败"}
+  ]
+}
